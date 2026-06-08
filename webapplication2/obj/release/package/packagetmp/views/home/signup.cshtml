@@ -1,0 +1,15 @@
+﻿
+@using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+{
+    <center>
+        <table border="1">
+     <tr><td align="center" colspan="2" style="color:palevioletred; font-size:x-large"> SIGN UP</td></tr>
+<tr><td>ENTER YOUR NAME</td><td><input name="USER_NAME" type="text" /></td></tr>
+<tr><td>ENTER YOUR EMAIL</td><td><input name="USER_EMAIL" type="text" /></td></tr> 
+<tr><td>ENTER PASSWORD</td><td><input name="USER_PASSWORD" type="password" /></td></tr>
+<tr><td>CONFIRM PASSWORD</td> <td><input name="CONFIRM_PASSWORD" type="password" /></td></tr>
+<tr><td align="center" colspan="2" style="font-size:medium; color:green"><input value="SIGN UP" type="submit" /></td></tr>
+<tr><td colspan="2">Already have an account?<a href="@Url.Action("Login","Home")">Login</a></td></tr>
+<tr><td align="center" colspan="2" style="color:red; font-size:medium">@ViewBag.Message</td> </tr></table>
+    </center>
+}
